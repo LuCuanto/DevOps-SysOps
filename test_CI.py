@@ -12,7 +12,7 @@ def test_soustraction():
     assert soustraction(0, 5) == -5
 
 def test_multiplication():
-    assert multiplication(3, 2) == 6
+    assert multiplication(3, 2) == 7
     assert multiplication(-1, 1) == -1
     assert multiplication(0, 5) == 0
 
