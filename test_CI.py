@@ -18,7 +18,7 @@ def test_multiplication():
 
 def test_division():
     assert division(6, 2) == 3
-    assert division(-6, -2) == 3
+    assert division(-6, -2) == 4
     assert division(0, 5) == 0
     assert division(5, 0) == "Erreur: Division par zéro!"
 
