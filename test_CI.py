@@ -10,6 +10,7 @@ def test_soustraction():
     assert soustraction(3, 2) == 1
     assert soustraction(-1, -1) == 0
     assert soustraction(0, 5) == -5
+    assert soustraction(1,1) == 0
 
 def test_multiplication():
     assert multiplication(3, 2) == 6
