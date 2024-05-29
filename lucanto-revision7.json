@@ -15,6 +15,13 @@
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
+                     {
+                    "name": "lucuanto-22-tcp",
+                    "containerPort": 22,
+                    "hostPort": 22,
+                    "protocol": "tcp",
+                    "appProtocol": "ssh"
+                }
             ],
             "essential": true,
             "environment": [],
