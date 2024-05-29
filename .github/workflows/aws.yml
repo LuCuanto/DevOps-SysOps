@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: lucuanto         # set this to your Amazon ECR repository name
   ECS_SERVICE: lucuanto                 # set this to your Amazon ECS service name
   ECS_CLUSTER: lucuanto                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: arn:aws:ecs:us-east-1:972960465862:service/lucuanto/lucuanto # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: https://github.com/LuCuanto/DevOps-SysOps/blob/dev/lucanto-revision1.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: lucuanto          # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
