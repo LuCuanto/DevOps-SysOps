@@ -2,7 +2,7 @@
 
 # Using Ubuntu as it has less vulnerabilities and debian but this should work with Debian:buster as well
 #FROM ubuntu:latest
-FROM ubuntu:rolling
+FROM python:3.12.3-bullseye
 
 
 # Install some common tools needed for the build
@@ -13,8 +13,6 @@ RUN apt-get update -qq && apt-get install --no-install-recommends --no-install-s
     ssh \
     unzip \
     ca-certificates \
-    gcc python3-dev \
-    python3-pip \
     shellcheck
 
 
