@@ -1,10 +1,12 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:972960465862:task-definition/lucanto:7",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:972960465862:task-definition/lucanto:11",
     "containerDefinitions": [
         {
             "name": "lucuanto",
-            "image": "972960465862.dkr.ecr.us-east-1.amazonaws.com/lucuanto:1544eb670af3854acb6a8714447a6515ed6fec0e",
-            "cpu": 1024,
+            "image": "972960465862.dkr.ecr.us-east-1.amazonaws.com/lucuanto:fe26b65116a2c69c010625f7f0cae44df1bef211",
+            "cpu": 2048,
+            "memory": 4096,
+            "memoryReservation": 4096,
             "portMappings": [
                 {
                     "name": "lucuanto-80-tcp",
@@ -12,13 +14,6 @@
                     "hostPort": 80,
                     "protocol": "tcp",
                     "appProtocol": "http"
-                },
-                {
-                    "name": "https",
-                    "containerPort": 443,
-                    "hostPort": 443,
-                    "protocol": "tcp",
-                    "appProtocol": "http2"
                 }
             ],
             "essential": true,
@@ -38,7 +33,7 @@
             "systemControls": [],
             "resourceRequirements": [
                 {
-                    "value": "1",
+                    "value": "2",
                     "type": "GPU"
                 }
             ]
@@ -48,7 +43,7 @@
     "taskRoleArn": "arn:aws:iam::972960465862:role/LabRole",
     "executionRoleArn": "arn:aws:iam::972960465862:role/LabRole",
     "networkMode": "awsvpc",
-    "revision": 7,
+    "revision": 11,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -63,6 +58,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
         },
         {
             "name": "com.amazonaws.ecs.capability.task-iam-role"
@@ -87,13 +85,13 @@
     "requiresCompatibilities": [
         "EC2"
     ],
-    "cpu": "1024",
+    "cpu": "2048",
     "memory": "8192",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-05-29T11:03:49.954Z",
+    "registeredAt": "2024-05-29T11:17:17.530Z",
     "registeredBy": "arn:aws:sts::972960465862:assumed-role/voclabs/user2908444=Lucas_ROUTIER",
     "tags": []
 }
