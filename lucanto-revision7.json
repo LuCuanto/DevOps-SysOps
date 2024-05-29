@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "lucuanto",
-            "image": "972960465862.dkr.ecr.us-east-1.amazonaws.com/lucuanto:fe26b65116a2c69c010625f7f0cae44df1bef211",
+            "image": "ami-04b70fa74e45c3917",
             "cpu": 2048,
             "memory": 4096,
             "memoryReservation": 4096,
