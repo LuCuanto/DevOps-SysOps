@@ -50,8 +50,6 @@ RUN wget -q https://github.com/tfsec/tfsec/releases/download/v0.39.9-fix-recursi
     tfsec -v && \
     rm -f tfsec
 
-# Install Checkov
-RUN pip install --no-cache-dir --upgrade setuptools && pip install checkov && checkov -v
 
 # Install the AWS CLI.
 RUN  wget --user-agent=Mozilla --content-disposition -E -c https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.1.31.zip && \
