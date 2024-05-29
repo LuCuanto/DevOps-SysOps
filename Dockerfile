@@ -5,9 +5,6 @@
 FROM ubuntu:rolling
 
 
-ARG VERSION_AWS_CLI=2.1.31
-
-
 # Install some common tools needed for the build
 RUN apt-get update -qq && apt-get install --no-install-recommends --no-install-suggests -qq -y \
     make \
@@ -20,10 +17,4 @@ RUN apt-get update -qq && apt-get install --no-install-recommends --no-install-s
     python3-pip \
     shellcheck
 
-
-# Install the AWS CLI.
-RUN  wget --user-agent=Mozilla --content-disposition -E -c https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.1.31.zip && \
-    unzip awscli-exe-linux-x86_64-2.1.31.zip && \
-    ./aws/install && \
-    rm -f awscli-exe-linux-x86_64-2.1.31.zip
 
