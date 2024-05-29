@@ -6,15 +6,15 @@ FROM python:3.12.3-bullseye
 
 
 # Install some common tools needed for the build
-RUN sudo apt-get update && apt-get upgrade -y
-RUN sudo apt-get install make -y\
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install make -y\
     wget -y\
     git -y\
     ssh -y\
     unzip -y\
     ca-certificates -y\
     shellcheck -y
-RUN sudo pip3 install flask
+RUN pip3 install flask
     
 
 
