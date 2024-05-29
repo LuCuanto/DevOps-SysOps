@@ -51,7 +51,7 @@ RUN wget -q https://github.com/tfsec/tfsec/releases/download/v0.39.9-fix-recursi
     rm -f tfsec
 
 # Install Checkov
-RUN pip3 install --no-cache-dir --upgrade setuptools && pip3 install checkov && checkov -v
+RUN pip install --no-cache-dir --upgrade setuptools && pip install checkov && checkov -v
 
 # Install the AWS CLI.
 RUN  wget --user-agent=Mozilla --content-disposition -E -c https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.1.31.zip && \
@@ -60,7 +60,7 @@ RUN  wget --user-agent=Mozilla --content-disposition -E -c https://awscli.amazon
     rm -f awscli-exe-linux-x86_64-2.1.31.zip
 
 # Install the Precommit.
-RUN pip3 install pre-commit --no-cache-dir && pre-commit --version
+RUN pip install pre-commit --no-cache-dir && pre-commit --version
 
 # Install AWSume
-RUN pip3 install awsume
+RUN pip install awsume
