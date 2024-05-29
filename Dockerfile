@@ -57,8 +57,6 @@ RUN  wget --user-agent=Mozilla --content-disposition -E -c https://awscli.amazon
     ./aws/install && \
     rm -f awscli-exe-linux-x86_64-2.1.31.zip
 
-# Install the Precommit.
-RUN pip install pre-commit --no-cache-dir && pre-commit --version
 
 # Install AWSume
 RUN pip install awsume
