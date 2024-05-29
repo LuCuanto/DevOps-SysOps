@@ -4,14 +4,9 @@
 #FROM ubuntu:latest
 FROM ubuntu:rolling
 
-# Some metadata.
-MAINTAINER Nick Marchini (https://github.com/nmarchini)
 
-# Used to control versions
-ARG VERSION_TERRAFORM=0.14.8
-ARG VERSION_TFLINT=0.25.0
 ARG VERSION_AWS_CLI=2.1.31
-ARG VERSION_TFSEC=0.39.20
+
 
 # Install some common tools needed for the build
 RUN apt-get update -qq && apt-get install --no-install-recommends --no-install-suggests -qq -y \
@@ -24,31 +19,6 @@ RUN apt-get update -qq && apt-get install --no-install-recommends --no-install-s
     gcc python3-dev \
     python3-pip \
     shellcheck
-
-# Install Terraform.
-RUN wget -q https://releases.hashicorp.com/terraform/${VERSION_TERRAFORM}/terraform_${VERSION_TERRAFORM}_linux_amd64.zip && \
-    unzip terraform_${VERSION_TERRAFORM}_linux_amd64.zip && \
-    install terraform /usr/local/bin && \
-    terraform -v && \
-    rm -f terraform_${VERSION_TERRAFORM}_linux_amd64.zip && \
-    rm -f terraform
-
-# Install tflint.
-RUN wget -q https://github.com/terraform-linters/tflint/releases/download/v${VERSION_TFLINT}/tflint_linux_amd64.zip && \
-    unzip tflint_linux_amd64.zip && \
-    install tflint /usr/local/bin && \
-    chmod ugo+x /usr/local/bin/tflint && \
-    tflint -v && \
-    rm -f tflint_linux_amd64.zip && \
-    rm -f tflint
-
-#Install TFSec
-RUN wget -q https://github.com/tfsec/tfsec/releases/download/v0.39.9-fix-recursive/tfsec-linux-amd64 && \
-    mv tfsec-linux-amd64 tfsec && \
-    install tfsec /usr/local/bin && \
-    chmod ugo+x /usr/local/bin/tfsec && \
-    tfsec -v && \
-    rm -f tfsec
 
 
 # Install the AWS CLI.
