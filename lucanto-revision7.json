@@ -20,7 +20,7 @@
                     "containerPort": 22,
                     "hostPort": 22,
                     "protocol": "tcp",
-                    "appProtocol": "ssh"
+                    "appProtocol": "http"
                 }
             ],
             "essential": true,
