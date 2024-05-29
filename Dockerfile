@@ -6,7 +6,7 @@ FROM python:3.12.3-bullseye
 
 
 # Install some common tools needed for the build
-RUN sudo yum update -y && sudo yum upgrade -y 
+RUN sudo yum update -y
 RUN sudo yum install make -y\
     wget -y\
     git -y\
