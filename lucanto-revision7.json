@@ -14,7 +14,7 @@
                     "hostPort": 80,
                     "protocol": "tcp",
                     "appProtocol": "http"
-                }
+                },
                      {
                     "name": "lucuanto-22-tcp",
                     "containerPort": 22,
