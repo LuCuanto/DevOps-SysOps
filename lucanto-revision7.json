@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "lucuanto",
-            "image": "ami-0c9d6fb6dde4b6e2e",
+            "image": "972960465862/ubuntu",
             "cpu": 2048,
             "memory": 4096,
             "memoryReservation": 4096,
