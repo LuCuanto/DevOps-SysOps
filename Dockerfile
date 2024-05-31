@@ -13,7 +13,8 @@ RUN apt-get install make -y\
     ssh -y\
     unzip -y\
     ca-certificates -y\
-    shellcheck -y
+    shellcheck -y\
+    dpkg -y
 
 RUN wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.5-1_amd64.deb && WAZUH_MANAGER='54.157.164.112' WAZUH_AGENT_GROUP='default' WAZUH_AGENT_NAME='wazuh-wordpress' dpkg -i ./wazuh-agent_4.7.5-1_amd64.deb
 RUN systemctl daemon-reload
