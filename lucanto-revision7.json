@@ -2,8 +2,8 @@
     "taskDefinitionArn": "arn:aws:ecs:us-east-1:972960465862:task-definition/lucanto:11",
     "containerDefinitions": [
         {
-            "name": "lucuanto",
-            "image": "972960465862/ubuntu",
+            "name": "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20240411",
+            "image": "ami-0e001c9271cf7f3b9",
             "cpu": 2048,
             "memory": 4096,
             "memoryReservation": 4096,
