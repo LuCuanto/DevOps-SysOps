@@ -15,10 +15,12 @@ RUN apt-get install make \
     ca-certificates \
     shellcheck \
     dpkg \
-    lsb-release -y
+    lsb-release \
+    sudo -y
 
 RUN wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.5-1_amd64.deb && WAZUH_MANAGER='54.157.164.112' WAZUH_AGENT_GROUP='default' WAZUH_AGENT_NAME='wazuh-wordpress' dpkg -i ./wazuh-agent_4.7.5-1_amd64.deb
-RUN service enable wazuh-agent
-RUN service start wazuh-agent 
+RUN sudo systemctl daemon-reload
+RUN sudo systemctl enable wazuh-agent
+RUN sudo systemctl start wazuh-agent
 
 
