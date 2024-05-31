@@ -21,6 +21,13 @@
                     "hostPort": 22,
                     "protocol": "tcp",
                     "appProtocol": "grpc"
+                },
+                     {
+                    "name": "lucuanto-443-tcp",
+                    "containerPort": 443,
+                    "hostPort": 443,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
                 }
             ],
             "essential": true,
