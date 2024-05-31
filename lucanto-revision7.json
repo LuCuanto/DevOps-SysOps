@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "lucuanto",
-            "image": "ami-04b70fa74e45c3917",
+            "image": "ami-0c9d6fb6dde4b6e2e",
             "cpu": 2048,
             "memory": 4096,
             "memoryReservation": 4096,
